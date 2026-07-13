@@ -10,7 +10,6 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-tema-dark sticky-top shadow">
     <div class="container">
       <a class="navbar-brand fw-bold text-white" href="#" data-page="home">
@@ -32,10 +31,8 @@
   </nav>
 
   <main>
-    <!-- HOME -->
     <section id="home" class="active">
       <div class="container">
-        <!-- Hero Carousel Placeholder -->
         <div id="heroCarousel" class="carousel slide jumbotron-bg mb-5" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
@@ -110,7 +107,6 @@
       </div>
     </section>
       
-    <!-- MENU -->
     <section id="menu">
       <div class="container">
         <div class="text-center mb-5">
@@ -119,7 +115,6 @@
         </div>
         <div class="row g-4">
           
-          <!-- Card 1 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bakmie.jpeg" class="menu-image" alt="Bakmie Karet (Halal)">
@@ -140,7 +135,6 @@
             </div>
           </div>
           
-          <!-- Card 2 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bihun2.jpeg" class="menu-image" alt="Bihun Kuah (Halal)">
@@ -158,7 +152,6 @@
             </div>
           </div>
           
-          <!-- Card 3 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="tka.jpeg" class="menu-image" alt="Kwetiau Kuah (Halal)">
@@ -176,7 +169,6 @@
             </div>
           </div>
           
-          <!-- Card 4 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bihun2.jpeg" class="menu-image" alt="Bihun Kuah Jumbo (Halal)">
@@ -194,7 +186,6 @@
             </div>
           </div>
           
-          <!-- Card 5 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bakmie.jpeg" class="menu-image" alt="Bakmie Karet Jumbo (Halal)">
@@ -212,7 +203,6 @@
             </div>
           </div>
           
-          <!-- Card 6 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="tka.jpeg" class="menu-image" alt="Udang Goreng Khas Tka">
@@ -230,7 +220,6 @@
             </div>
           </div>
           
-          <!-- Card 7 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bihun2.jpeg" class="menu-image" alt="Telor Kecap">
@@ -248,7 +237,6 @@
             </div>
           </div>
           
-          <!-- Card 8 -->
           <div class="col-md-4">
             <div class="card menu-card shadow-sm h-100">
               <img src="bakmie.jpeg" class="menu-image" alt="Pangsit Bihun (Halal)">
@@ -273,7 +261,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header"><button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">Apakah Seluruh Hidangan di Sini Dijamin Halal?</button></h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionMenuInfo">
-                <div class="accordion-body text-muted">Benar, semua menu utama kami berlabel halal dan menggunakan bahan-bahan bersertifikasi aman, bebas dari minyak/daging babi, serta diproses higienis.</div>
+                <div class="accordion-body text-muted">Benar, semua menu utama kami berlabel halal and menggunakan bahan-bahan bersertifikasi aman, bebas dari minyak/daging babi, serta diproses higienis.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -287,7 +275,6 @@
       </div>
     </section>
 
-    <!-- TENTANG KAMI -->
     <section id="tentang">
       <div class="container">
         <div class="row align-items-center g-5">
@@ -319,7 +306,6 @@
       </div>
     </section>
 
-    <!-- KONTAK -->
     <section id="kontak">
       <div class="container">
         <div class="text-center mb-5">
@@ -401,15 +387,67 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
+    // 1. Fungsi Mengisi Konten Modal Detail Menu
     function setModalContent(title, description) {
       document.getElementById('modalMenuTitle').innerText = title;
       document.getElementById('modalMenuDesc').innerText = description;
     }
     
     document.addEventListener("DOMContentLoaded", function() {
+      // 2. Inisialisasi Fitur Popover Komitmen Kami (Bootstrap)
       var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
       var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
         return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      // 3. Logika Pindah Halaman SPA (Navbar & Tombol Hero)
+      const navigationLinks = document.querySelectorAll("[data-page]");
+      const contentSections = document.querySelectorAll("main section");
+
+      navigationLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetPageId = this.getAttribute("data-page");
+          const targetSection = document.getElementById(targetPageId);
+
+          if (!targetSection) return;
+
+          contentSections.forEach(function (section) {
+            section.classList.remove("active");
+          });
+          targetSection.classList.add("active");
+
+          document.querySelectorAll(".navbar-nav .nav-link").forEach(function (navLink) {
+            navLink.classList.remove("active-nav");
+            if (navLink.getAttribute("data-page") === targetPageId) {
+              navLink.classList.add("active-nav");
+            }
+          });
+
+          window.scrollTo({ top: 0, behavior: "smooth" });
+
+          const navbarCollapseElement = document.getElementById("navbarNav");
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseElement);
+          if (bsCollapse) { bsCollapse.hide(); }
+        });
+      });
+
+      // 4. Logika Loading Spinner & Submit Form Masukan
+      const contactForm = document.getElementById("contactForm");
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const submitBtn = document.getElementById("btnSubmitForm");
+        const originalBtnContent = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span>Mengirim...';
+
+        setTimeout(function () {
+          alert("Terima kasih! Pesan Anda berhasil dikirim.");
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnContent;
+          contactForm.reset();
+        }, 1200);
       });
     });
   </script>
