@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarapan Pagi TKA - Warung Makan Khas Tionghoa Pekanbaru</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -39,14 +37,16 @@
         </span>
         <span class="brand-text text-white menu-oriental">TKA <span class="brand-sub">Pekanbaru</span></span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon-custom"></span>
       </button>
+      
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-lg-3">
           <li class="nav-item"><a class="nav-link text-white fw-semibold active-nav" href="#" data-page="home">Home</a></li>
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#" data-page="menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#" data-page="reservasi">Reservasi Meja</a></li>
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#" data-page="tentang">Tentang Kami</a></li>
           <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#" data-page="kontak">Kontak & Lokasi</a></li>
         </ul>
@@ -74,13 +74,12 @@
                   <p class="mb-4 text-muted-premium">Menyajikan kehangatan sarapan pagi yang higienis, lezat, dan dibuat sepenuh hati di Jalan Kuantan Raya, Pekanbaru.</p>
                   <div class="d-flex gap-3 flex-wrap">
                     <a href="#" class="btn btn-luxury-primary pulse-effect" data-page="menu"><i class="fa-solid fa-utensils me-2"></i>Lihat Menu Utama</a>
-                    <a href="#" class="btn btn-luxury-outline" data-page="kontak"><i class="fa-solid fa-map-location-dot me-2"></i>Cek Lokasi</a>
+                    <a href="#" class="btn btn-luxury-outline" data-page="reservasi"><i class="fa-solid fa-chair me-2"></i>Pesan Kursi</a>
                   </div>
                 </div>
                 <div class="hero-image"><img src="initempat.jpeg" alt="Suasana ruang makan Sarapan Pagi TKA"></div>
               </div>
             </div>
-            
             <div class="carousel-item">
               <div class="hero-slide">
                 <div class="hero-content">
@@ -110,9 +109,9 @@
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-next-icon"></span></button>
         </div>
-        
+
         <div class="row g-4 text-center mt-2">
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="feature-card-luxury p-5 rounded-4 h-100">
@@ -138,7 +137,7 @@
         </div>
       </div>
     </section>
-      
+
     <section id="menu">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -151,7 +150,7 @@
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="bakmie.jpeg" class="menu-image-luxury" alt="Bakmie Karet (Halal)">
+                <img src="bakmie.jpeg" class="menu-image-luxury" alt="Bakmie Karet">
                 <span class="badge-float">Terlaris</span>
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
@@ -171,7 +170,7 @@
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="bihunkuah.jpeg" class="menu-image-luxury" alt="Bihun Kuah (Halal)">
+                <img src="bihunkuah.jpeg" class="menu-image-luxury" alt="Bihun Kuah">
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
                 <div>
@@ -181,7 +180,7 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-light">
                   <span class="text-harga fs-5">Rp 36.500</span>
-                  <button class="btn btn-luxury-sm" data-bs-toggle="modal" data-bs-target="#detailMenuModal" onclick="setModalContent('Bihun Kuah (Halal)', 'Hidangan bihun berkualitas lembut yang disajikan dalam rendaman kuah sup gurih kaya kaldu alami, lengkap dengan sayuran hijau segar dan suwiran daging ayam.')">Detail</button>
+                  <button class="btn btn-luxury-sm" data-bs-toggle="modal" data-bs-target="#detailMenuModal" onclick="setModalContent('Bihun Kuah (Halal)', 'Hidangan bihun berkualitas lembut yang disajikan dalam rendaman kuah sup gurih kaya kaldu alami, lengkap dengan sayuran hijau segar and suwiran daging ayam.')">Detail</button>
                 </div>
               </div>
             </div>
@@ -190,7 +189,7 @@
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="kwetiau.jpeg" class="menu-image-luxury" alt="Kwetiau Kuah (Halal)">
+                <img src="kwetiau.jpeg" class="menu-image-luxury" alt="Kwetiau Kuah">
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
                 <div>
@@ -200,16 +199,16 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-light">
                   <span class="text-harga fs-5">Rp 36.500</span>
-                  <button class="btn btn-luxury-sm" data-bs-toggle="modal" data-bs-target="#detailMenuModal" onclick="setModalContent('Kwetiau Kuah (Halal)', 'Kwetiau basah bertekstur lembut dan kenyal disajikan bersama sup kaldu ayam yang kaya rempah oriental bening, pas untuk menghangatkan pagi hari Anda.')">Detail</button>
+                  <button class="btn btn-luxury-sm" data-bs-toggle="modal" data-bs-target="#detailMenuModal" onclick="setModalContent('Kwetiau Kuah (Halal)', 'Kwetiau basah bertekstur lembut and kenyal disajikan bersama sup kaldu ayam yang kaya rempah oriental bening, pas untuk menghangatkan pagi hari Anda.')">Detail</button>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="bihunkuah.jpeg" class="menu-image-luxury" alt="Bihun Kuah Jumbo (Halal)">
+                <img src="bihunkuah.jpeg" class="menu-image-luxury" alt="Bihun Kuah Jumbo">
                 <span class="badge-float bg-dark text-white">X-TRA PUAS</span>
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
@@ -225,11 +224,11 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="250">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="bakmiekaretjumbo.jpeg" class="menu-image-luxury" alt="Bakmie Karet Jumbo (Halal)">
+                <img src="bakmiekaretjumbo.jpeg" class="menu-image-luxury" alt="Bakmie Karet Jumbo">
                 <span class="badge-float bg-dark text-white">X-TRA PUAS</span>
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
@@ -245,11 +244,11 @@
               </div>
             </div>
           </div>
-          
+
           <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="card menu-card-luxury h-100">
               <div class="menu-image-wrapper-luxury">
-                <img src="udanggoreng.webp" class="menu-image-luxury" alt="Udang Goreng Khas Tka">
+                <img src="udanggoreng.webp" class="menu-image-luxury" alt="Udang Goreng">
                 <span class="badge-float gold-badge">CRUNCHY</span>
               </div>
               <div class="card-body-luxury d-flex flex-column justify-content-between p-4">
@@ -291,6 +290,143 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservasi">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="subtitle-premium uppercase text-emas font-display">Pilih Tempat Terbaikmu</span>
+          <h2 class="fw-bold text-tema title-decorator font-display mt-2">Reservasi Kursi & Meja</h2>
+          <p class="text-muted mt-2">Silakan pilih nomor meja yang tersedia secara visual di bawah ini.</p>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 mb-4 flex-wrap" data-aos="fade-up">
+          <div class="d-flex align-items-center gap-2"><div class="skema-meja tersedia-sample"></div> <span class="small text-muted">Tersedia</span></div>
+          <div class="d-flex align-items-center gap-2"><div class="skema-meja terpilih-sample"></div> <span class="small text-muted">Pilihan Anda</span></div>
+        </div>
+
+        <div class="denah-layout p-4 rounded-4 mb-5 shadow mx-auto" style="max-width: 900px;" data-aos="zoom-in">
+          <div class="text-center w-100">
+            <div class="kasir-bar mb-5 mx-auto text-white menu-oriental">AREA KASIR & DAPUR UTAMA</div>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6 border-end border-secondary-custom pe-md-4">
+              <h5 class="text-white menu-oriental small tracking-wider mb-3 text-start text-emas"><i class="fa-solid fa-arrow-left me-2"></i>Sisi Kiri (Porsi Keluarga)</h5>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 01 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 01</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 02 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 02</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 03 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 03</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 04 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 04</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 05 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 05</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 06 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 06</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 07 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 07</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 08 (4 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 08</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">4 Kursi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 ps-md-4 mt-4 mt-md-0">
+              <h5 class="text-white menu-oriental small tracking-wider mb-3 text-start text-emas"><i class="fa-solid fa-arrow-right me-2"></i>Sisi Kanan (Porsi Santai)</h5>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 09 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 09</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 10 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 10</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 11 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 11</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 12 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 12</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 13 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 13</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="meja-box border rounded p-3 text-center" data-meja="Meja 14 (2 Kursi)">
+                    <i class="fa-solid fa-table fs-3 mb-2"></i>
+                    <h6 class="fw-bold mb-1 text-white">Meja 14</h6>
+                    <span class="badge bg-light text-dark px-2 py-1" style="font-size: 0.65rem;">2 Kursi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+          <button id="btnBukaFormReservasi" class="btn btn-luxury-primary disabled pulse-effect py-3 px-5"><i class="fa-solid fa-calendar-check me-2"></i>Lanjutkan Data Pemesanan</button>
         </div>
       </div>
     </section>
@@ -362,15 +498,18 @@
               </form>
             </div>
           </div>
+
           <div class="col-lg-6" data-aos="fade-up-left">
             <div class="map-box-luxury p-5 rounded-4 shadow d-flex flex-column justify-content-between">
               <div>
                 <h4 class="fw-bold text-tema mb-3 font-display"><i class="fa-solid fa-map-pinned me-2 text-emas"></i>Peta Lokasi Digital</h4>
-                <p class="text-muted small mb-3"><i class="fa-solid fa-location-dot text-danger me-2"></i>Perum, Jl. Kuantan Raya Blok I No.15, Sekip, Lima Puluh, Kota Pekanbaru, Riau 28142</p>
+                <p class="text-muted small mb-3"><i class="fa-solid fa-location-dot text-danger me-2"></i>Perum, Jl. Kuantan Raya blok i No.15, Sekip, Lima Puluh, Kota Pekanbaru, Riau 28142</p>
+                
                 <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-sm mb-4 border border-secondary">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.687595305602!2d101.4641663!3d0.5284167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ac34c0f86237%3A0xe5a3bb408b0b8c67!2sJl.%20Kuantan%20Raya%2C%20Sekip%2C%20Kec.%20Lima%20Puluh%2C%20Kota%20Pekanbaru%2C%20Riau!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Sarapan Pagi TKA"></iframe>
+                  <iframe src="https://maps.google.com/maps?q=Sarapan%20Pagi%20TKA%20Jondul%20Pekanbaru&t=&z=17&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi Sarapan Pagi TKA"></iframe>
                 </div>
               </div>
+              
               <div class="border-top pt-4 border-secondary-custom">
                 <h6 class="fw-bold text-white mb-3 font-display">Social Media Kami:</h6>
                 <div class="d-flex gap-2 flex-wrap">
@@ -410,6 +549,50 @@
         <div class="modal-footer border-0">
           <button type="button" class="btn btn-luxury-outline rounded-pill px-4" data-bs-dismiss="modal">Tutup</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formReservasiModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg overflow-hidden custom-modal">
+        <div class="modal-header text-white border-0">
+          <h5 class="modal-title fw-bold font-display"><i class="fa-solid fa-chair text-emas me-2"></i>Informasi Pemesanan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="reservasiForm">
+          <div class="modal-body p-4 text-white">
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Pilihan Kursi & Meja</label>
+              <input type="text" id="inputMejaTerpilih" class="form-control text-emas fw-bold" readonly style="background: rgba(255,255,255,0.1);">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Nama Lengkap Pemesan</label>
+              <input type="text" name="namaRes" class="form-control" placeholder="Ketik nama Anda di sini..." required>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label fw-semibold d-block mb-2">Jam Kedatangan</label>
+              <div class="jam-grid-container">
+                <label class="jam-item"><input type="radio" name="jamRes" value="07:00 WIB" required><span>07:00</span></label>
+                <label class="jam-item"><input type="radio" name="jamRes" value="08:00 WIB"><span>08:00</span></label>
+                <label class="jam-item"><input type="radio" name="jamRes" value="09:00 WIB"><span>09:00</span></label>
+                <label class="jam-item"><input type="radio" name="jamRes" value="10:00 WIB"><span>10:00</span></label>
+                <label class="jam-item"><input type="radio" name="jamRes" value="11:00 WIB"><span>11:00</span></label>
+                <label class="jam-item"><input type="radio" name="jamRes" value="12:00 WIB"><span>12:00</span></label>
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Jumlah Orang/Kunjungan</label>
+              <input type="number" name="jumlahOrang" class="form-control" min="1" max="15" placeholder="Contoh: 4" required>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-luxury-outline rounded-pill text-white px-4 border-white" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-luxury-primary rounded-pill px-4"><i class="fa-brands fa-whatsapp me-2"></i>Kirim Data Meja</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
